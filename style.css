@@ -1,0 +1,283 @@
+html, body, #mainPart {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Yomogi', cursive;
+	font-size: x-large;
+}
+
+p, a {
+	color: rgba(255, 255, 255, 1);
+	text-shadow: 
+		-1px -1px 0px #000,
+		-1px -1px 0px #000,
+		1px 1px 0px #000,
+		1px 1px 0px #000,
+		4px 4px 5px #333,
+		4px 4px 5px #333,
+		4px 4px 5px #333,
+		4px 4px 5px #333;
+}
+
+#background {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url("images/lily.jpg");
+	background-size: cover;
+	background-position: right bottom;
+	filter: blur(2px) saturate(0);
+}
+
+.header {
+	position: fixed;
+	height: 5em;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.25) 60%, rgba(0, 0, 0, 0.0) 100%);
+	z-index: 1;
+	font-size: xx-large;
+}
+
+.header p {
+	height: 1em;
+	margin-right: calc(10px + 1em);
+	color: rgba(255, 255, 255, 0.8);
+	text-shadow: 
+		4px 4px 5px #777,
+		4px 4px 5px #777,
+		4px 4px 5px #777,
+		4px 4px 5px #777;
+}
+
+.companyName {
+	margin-top: 10px;
+	text-align: right;
+	font-family: 'Yusei Magic', sans-serif;
+}
+
+.bound span {
+	display: inline-block;
+	position: relative;
+	width: 1em;
+	animation: bound 10.0s 0.0s infinite;
+	will-change: transform;
+}
+.bound span:nth-child(2) { 
+	animation-delay: -9.9s;
+}
+.bound span:nth-child(3) { 
+	animation-delay: -9.8s;
+}
+.bound span:nth-child(4) { 
+	animation-delay: -9.7s;
+}
+.bound span:nth-child(5) { 
+	animation-delay: -9.6s;
+}
+.bound span:nth-child(6) { 
+	animation-delay: -9.5s;
+}
+.bound span:nth-child(7) { 
+	animation-delay: -9.4s;
+}
+.bound span:nth-child(8) { 
+	animation-delay: -9.3s;
+}
+.bound span:nth-child(9) { 
+	animation-delay: -9.2s;
+}
+.bound span:nth-child(10) { 
+	animation-delay: -9.1s;
+}
+.bound span:nth-child(11) { 
+	animation-delay: -9.0s;
+}
+
+.catchPhrase {
+	position: absolute;
+	width: 32em;
+	right: 0;
+	bottom: 32px;
+	text-align: center;
+	color: rgba(200, 220, 220, 1) !important;
+	text-shadow: 3px 0px 2px rgb(20, 20, 20) !important;
+	font-size: medium;
+	font-family: 'Tangerine', cursive;
+	letter-spacing: 4px;
+}
+
+.catchPhrase::before, .catchPhrase::after {
+	content: "";
+	position: absolute;
+	width: 12em;
+	height: 1px;
+	top: 50%;
+	border-top: solid 1px rgba(200, 220, 220, 0.5);
+	box-shadow: 3px 0px 3px rgba(50, 50, 50, 0.7);
+}
+
+.catchPhrase::before {
+	left: 0;
+}
+
+.catchPhrase::after {
+	right: 0;
+}
+
+#mainPart {
+	position: relative;
+	padding-top: 5em;
+	overflow-x: hidden;
+	transform-style: preserve-3d;
+	perspective: 200px;
+	/* FireFoxでのスクロールバー非表示 */
+	scrollbar-width: none;
+}
+
+/* FireFox以外でスクロールバー非表示 */
+#mainPart::-webkit-scrollbar {
+	display: none;
+}
+
+.textContainer {
+	position: relative;
+	width: 80%;
+	box-sizing: border-box;
+	padding: 0 50px;
+	line-height: 4em;
+}
+
+.textContainer p {
+	margin: 4em 0;
+}
+
+.textBackground {
+	position: absolute;
+	height: 800%;
+	top: -400%;
+	right: 5%;
+	left: -400%;
+	background: linear-gradient(90deg, rgba(46,77,50,0.8) 0% 80%, rgba(10,92,97,0.8) 100%);
+	box-shadow: 15px 15px 20px #555;
+	transform: translateZ(-200px) rotate(30deg);
+	transform-style: preserve-3d;
+}
+
+.textBackground::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 15%;
+	background-color: rgba(94, 153, 80, 0.7);
+	box-shadow: 15px 15px 40px #555;
+	transform: translateZ(-300px) rotateZ(15deg);
+}
+
+.textBackground::after {
+	content: "";
+	display: block;
+	height: 180%;
+}
+
+.footer {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	text-align: right;
+	padding-right: 1em;
+}
+
+.footer::before {
+	content: "";
+	position: fixed;
+	right: -8em;
+	bottom: -12em;
+	width: 20em;
+	height: 20em;
+	border-radius: 50%;
+	background-color: rgba(46, 77, 50, 0.5);
+}
+
+.footer p {
+	position: relative;
+	z-index: 1;
+	font-size: large;
+}
+
+.blog {
+	display: flex;
+	height: 2em;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.blog a {
+	height: 100%;
+}
+
+.qiita {
+	height: 100%;
+	margin-left: 5px;
+}
+
+.copyright p {
+	color: white;
+	font-size: small;
+	text-shadow: 0px 0px 5px #222, 0px 0px 5px #222, 0px 0px 5px #222, 0px 0px 5px #222, 0px 0px 5px #222 ;
+}
+
+@keyframes bound {
+	0%, 35%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+	10% { transform: translate3d(0, -100%, 0) scale(1); }
+	25% { transform: translate3d(0, 0, 0) scale(1.2, 0.8); }
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		font-size: medium;
+	}
+	
+	.header {
+		font-size: large;
+	}
+
+	.catchPhrase {
+		width: 18em;
+		bottom: -8px;
+	}
+
+	.catchPhrase::before, .catchPhrase::after {
+		width: 5em;
+	}
+
+	.textBackground {
+		right: -15%;
+		transform: translateZ(-200px) rotateZ(15deg);
+	}
+
+	.textContainer {
+		width: 90%;
+		padding: 0 2em;
+		line-height: 3em;
+	}
+
+	.textContainer br {
+		display: none;
+	}
+	
+	.footer::before {
+		bottom: -11em;
+	}
+
+	.footer p {
+		font-size: small;
+	}
+}
