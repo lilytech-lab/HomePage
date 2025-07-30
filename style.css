@@ -198,10 +198,10 @@ p, a {
 .footer::before {
 	content: "";
 	position: fixed;
-	right: -8em;
-	bottom: -12em;
-	width: 20em;
-	height: 20em;
+	right: -13.5em;
+	bottom: -19.5em;
+	width: 30em;
+	height: 30em;
 	border-radius: 50%;
 	background-color: rgba(46, 77, 50, 0.5);
 }
@@ -214,7 +214,7 @@ p, a {
 
 .blog {
 	display: flex;
-	height: 2em;
+	height: 1.5em;
 	justify-content: flex-end;
 	align-items: center;
 }
@@ -223,9 +223,9 @@ p, a {
 	height: 100%;
 }
 
-.qiita {
+.blogIcon {
 	height: 100%;
-	margin-left: 5px;
+	margin-left: 0.7em;
 }
 
 .copyright p {
@@ -274,10 +274,18 @@ p, a {
 	}
 	
 	.footer::before {
-		bottom: -11em;
+		bottom: -19.8em;
 	}
 
 	.footer p {
 		font-size: small;
+	}
+
+	.blog {
+		height: 1.0em;
+	}
+
+	.blogIcon {
+		margin-left: 0.5em;
 	}
 }
